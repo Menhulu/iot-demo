@@ -1,0 +1,41 @@
+@import '~styles/variables.less';
+
+.mheader {
+  padding: 16px;
+  // padding-top: 66px;
+  background: @white;
+  border-bottom: 1px solid#EFEFEF;
+  position: relative;
+  .back {
+    color: @primary;
+    cursor: pointer;
+    font-size: 12px;
+    .icon-direc-left {
+      margin-right: 6px;
+      font-size: 20px;
+    }
+    span {
+      vertical-align: middle;
+    }
+  }
+  .diviedr {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background: @black;
+    margin: 0 20px;
+    vertical-align: middle;
+  }
+  &-title {
+    font-size: @biggerFontSize;
+    color: @black;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+  .create-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

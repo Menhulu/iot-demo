@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["/*"],
+      "typings/*": ["typings/*"],
+      "utils/*": ["utils/*"],
+      "components/*": ["components/*"],
+      "application/*": ["application/*"],
+      "container/*": ["container/*"],
+      "static/*": ["static~!@`/*"],
+      "common/*": ["common/*"],
+      "i18n/*": ["i18n/*"]
+    }
+  }
+}

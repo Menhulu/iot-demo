@@ -1,0 +1,56 @@
+@import '~styles/variables.less';
+.data-overview {
+  height: 100%;
+  &-header {
+    .deadline {
+      color: @grey-light;
+    }
+  }
+  &-content {
+    background: @white;
+    padding: 30px;
+    height: calc(100% - 70px);
+    min-height: 500px;
+    overflow-y: auto;
+    .chart-box {
+      height: 100%;
+      padding: 20px 0;
+      border: 1px solid #007aff;
+      border-radius: 4px;
+      .chart-title {
+        display: flex;
+        flex-direction: row;
+        // justify-content: space-between;
+        align-items: flex-end;
+        height: 36px;
+        padding: 0 40px 0 20px;
+        font-size: 16px;
+        font-weight: 500;
+        color: @gray;
+        .total-count {
+          line-height: 1;
+          color: @gray;
+          &-num {
+            margin-left: 5px;
+            font-size: 20px;
+          }
+          &-unit {
+            font-size: 14px;
+          }
+        }
+        &-tip {
+          margin-left: 20px;
+          font-size: 12px;
+          color: @grey-light;
+        }
+      }
+      .chart {
+        height: calc(100% - 36px);
+      }
+    }
+    .chart-box.event-chart-box {
+      margin-top: 10px;
+      height: calc(60% - 10px);
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import '~styles/variables.less';
+.rule-list-wrap {
+  .mheader {
+    position: relative;
+    .add-link {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+  }
+}
+.rule-header-content {
+  .IOT-select {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .IOT-input {
+    width: 100px;
+  }
+  .search-input {
+    display: inline-block;
+    width: 480px;
+    vertical-align: middle;
+    margin-left: 20px;
+  }
+  .IOT-select-selection__rendered {
+    overflow: hidden;
+    height: 30px;
+  }
+}
+.rule-list {
+  text-align: center;
+  background: @white;
+  overflow-x: hidden;
+  .active {
+    color: @primary;
+  }
+  .error {
+    color: @red;
+  }
+  .IOT-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .IOT-empty-image {
+      display: inline-block;
+      width: 120px;
+      height: 120px;
+      background: url(../../../static/pic/icon-null.png) center center no-repeat;
+    }
+
+    .IOT-empty-description {
+      line-height: 24px;
+      color: #b6b6b6;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import '~styles/variables.less';
+.create-edit-modal {
+  .IOT-btn {
+    width: 90px;
+    padding: 0;
+    color: #626262;
+    background: #f8f9f9;
+    border-color: #d8d8d8;
+    border-width: 1px;
+  }
+  .IOT-btn-primary {
+    text-shadow: none;
+    box-shadow: none;
+    background-color: #006569;
+    color: #fff;
+    border-color: #006569;
+  }
+  .form-modal {
+    .IOT-form-explain {
+      text-align: left;
+    }
+    input.IOT-input {
+      width: 300px;
+    }
+    .IOT-form-item-control {
+      text-align: left;
+      line-height: 1;
+    }
+    .IOT-form-item label {
+      margin-right: 22px;
+    }
+    .tips {
+      margin-left: 20px;
+      font-size: @smallFontSize;
+      color: @gray-lighter;
+    }
+    .form-btn-item {
+      display: flex;
+      justify-content: center;
+      .IOT-form-item-control {
+        text-align: center;
+      }
+      .IOT-btn {
+        margin: 20px;
+      }
+    }
+  }
+  .IOT-input-number {
+    width: 300px;
+    border-radius: 0;
+    .IOT-input-number-input {
+      padding: 5px 9px;
+    }
+    color: #000;
+    background: #fff;
+    outline: none;
+    box-shadow: none;
+    &[disabled] {
+      background: @gray-lightest;
+    }
+  }
+}

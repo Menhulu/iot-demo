@@ -1,0 +1,106 @@
+@import '~styles/variables.less';
+.menu-header {
+  position: relative;
+  height: @header-height;
+  line-height: @header-height;
+  width: 100%;
+  padding: 0;
+  background-color: @header-dark-bg;
+  background-image: linear-gradient(to right, @menu-left-bg, @menu-right-bg);
+
+  .logo-wrap {
+    // width: 188px;
+    height: @header-height;
+    // line-height: @header-height;
+    color: @white;
+    // text-align: center;
+    // background-image: linear-gradient(to right, #253748, #0b2540);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    .logo-title {
+      font-size: 18px;
+      text-align: center;
+    }
+    .small-logo {
+      width: 50px;
+      margin-right: 10px;
+      img {
+        width: 100%;
+        height: 40px;
+      }
+    }
+    .big-logo {
+      width: 144px;
+      margin-right: 10px;
+      img {
+        width: 100%;
+        height: 81px;
+      }
+    }
+  }
+
+  .user-center {
+    position: absolute;
+    z-index: 5;
+    right: @bigSpace;
+    height: @header-height;
+    line-height: @header-height;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    min-width: 76px;
+    color: @white;
+
+    .avatar {
+      .icon,
+      .user {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+      }
+    }
+
+    .exit-box {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: @header-height;
+      padding: 4px;
+
+      .exit-content {
+        width: 84px;
+        margin-left: -44px;
+        background: @menuh-box-bg;
+        color: @baseFontColor;
+        font-size: @smallFontSize;
+        border-radius: 3px;
+        box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+      }
+      .exit-login {
+        font-size: @smallFontSize;
+        text-align: center;
+        cursor: pointer;
+        height: 28px;
+        line-height: 28px;
+        position: relative;
+        & > .IOTicon {
+          margin-right: 5px;
+        }
+        &:hover {
+          background-color: @menuh-box-hover-bg;
+          color: @menu-box-hover-color;
+        }
+      }
+
+      a {
+        color: @white;
+      }
+    }
+
+    &:hover .exit-box {
+      display: block;
+      z-index: 1055;
+    }
+  }
+}

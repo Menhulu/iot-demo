@@ -1,0 +1,61 @@
+@import '~styles/variables.less';
+.state-grid-modal {
+  .IOT-modal-close {
+    &:hover {
+      .IOTicon {
+        transform: rotate(180deg);
+        transition: all 0.2s linear;
+      }
+    }
+  }
+  .IOT-modal-content {
+    min-height: 200px;
+  }
+  .IOT-modal-header {
+    padding-top: 36px;
+    border-bottom: none;
+    .IOT-modal-title {
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+  .IOT-modal-body {
+    padding: 0;
+    min-height: 48px;
+    text-align: center;
+    color: #5d5d5d;
+    line-height: 24px;
+  }
+  .IOT-modal-footer {
+    padding: 20px 16px;
+    border-top: none;
+    text-align: center;
+    button + button {
+      margin-left: 20px;
+    }
+    .IOT-btn {
+      width: 90px;
+      padding: 0;
+      color: @gray;
+      background: @gray-bg;
+      border-color: @gray-lighter;
+      border-width: 1px;
+      &:hover {
+        background-color: @gray-lightest;
+        border-color: @gray-lightecc;
+      }
+    }
+    .IOT-btn-primary {
+      text-shadow: none;
+      box-shadow: none;
+      background-color: @primary;
+      color: @white;
+      border-color: @primary;
+      &:hover {
+        background-color: @btn-hover-highlight;
+        border-color: @btn-hover-highlight;
+      }
+    }
+  }
+}

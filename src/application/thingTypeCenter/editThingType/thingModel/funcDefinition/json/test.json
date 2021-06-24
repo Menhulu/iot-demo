@@ -1,0 +1,151 @@
+{
+  "properties": [
+    {
+      "id": "vs491jekqc00000000",
+      "permission": "R",
+      "name": "sll",
+      "cnName": "开",
+      "unit": "",
+      "type": "i",
+      "canEnume": true,
+      "list": [
+        {
+          "1": "12"
+        },
+        {
+          "2": "坎坎坷坷"
+        }
+      ]
+    },
+    {
+      "max": 127,
+      "unit": "",
+      "name": "sll0",
+      "step": 1,
+      "permission": "R",
+      "min": -128,
+      "canEnume": false,
+      "cnName": "测试",
+      "type": "y",
+      "id": "ya1lprbhkio0000000",
+      "range": [-128, 127, 1]
+    }
+  ],
+  "services": [
+    {
+      "id": "kz76apf4r000000000",
+      "name": "sll",
+      "cnName": "service1",
+      "description": "描述",
+      "inParam": [
+        {
+          "name": "power",
+          "unit": "",
+          "type": "i",
+          "cnName": "开",
+          "permission": "R",
+          "list": [1, 2],
+          "id": "vaoueqd1t340000000"
+        }
+      ],
+      "outParam": [
+        {
+          "name": "power",
+          "unit": "",
+          "type": "i",
+          "cnName": "开",
+          "permission": "R",
+          "list": [1, 2],
+          "descList": [
+            {
+              "1": "12"
+            },
+            {
+              "2": "坎坎坷坷"
+            }
+          ],
+          "id": "8ku5jqml7x000000000"
+        }
+      ]
+    },
+    {
+      "name": "service2",
+      "cnName": "service2",
+      "description": "描述12",
+      "inParam": [],
+      "outParam": [
+        {
+          "name": "power1",
+          "unit": "",
+          "type": "i",
+          "cnName": "开",
+          "permission": "R",
+          "list": [1, 2],
+          "descList": [
+            {
+              "1": "12"
+            },
+            {
+              "2": "坎坎坷坷"
+            }
+          ]
+        }
+      ],
+      "id": "7ic8tw9bap00000000"
+    }
+  ],
+  "events": [
+    {
+      "id": "a0ygygymkos000000",
+      "name": "event",
+      "cnName": "evnet",
+      "description": "描述1所得税2",
+      "parameters": [
+        {
+          "unit": "",
+          "name": "power1",
+          "permission": "R",
+          "desList": [
+            {
+              "1": "撒大声地"
+            },
+            {
+              "2": "撒大声地"
+            }
+          ],
+          "canEnume": true,
+          "cnName": "开",
+          "type": "i",
+          "id": "dhsp7tx1x1s0000000",
+          "list": ["0", "1"]
+        }
+      ]
+    },
+    {
+      "id": "2jqdc6t3z4q0000000",
+      "name": "u",
+      "cnName": "sd",
+      "description": "sd",
+      "parameters": []
+    }
+  ]
+}
+{
+    "id": "urn:jiot-spec-v1:thing_model:light:1234512345123451",
+    "type": "entity",
+    "topic":"12",
+    "models":[
+        {
+         "functions":[
+             {
+                 "id": "urn:jiot-spec-v1:function:light:1234512345123451",
+                 "description":"sasa",
+                 "in": [{
+                     "id": ""
+                 }]
+             }
+         ]   
+        }
+    ]   
+    
+}

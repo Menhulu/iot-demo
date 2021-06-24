@@ -1,0 +1,43 @@
+@import '~styles/variables.less';
+
+.pagination-wrap {
+  display: flex;
+  align-items: center;
+  &.center {
+    justify-content: center;
+  }
+  &.left {
+    justify-content: flex-start;
+  }
+  &.right {
+    justify-content: flex-end;
+  }
+  .IOT-pagination-item {
+    a {
+      font-size: @baseFontSize;
+      color: @gray;
+      &:hover {
+        color: @primary;
+      }
+    }
+  }
+  .IOT-pagination-item-active {
+    border-color: @primary;
+    background: @primary;
+    color: @white;
+    a {
+      color: @white;
+      &:hover {
+        color: @white;
+      }
+    }
+  }
+  .IOT-pagination-disabled {
+    a {
+      color: @gray-light;
+      &:hover {
+        color: @gray-light;
+      }
+    }
+  }
+}

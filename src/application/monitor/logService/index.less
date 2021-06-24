@@ -1,0 +1,193 @@
+@import '~styles/variables.less';
+@import '~styles/mixins/ellipsis.less';
+.device-log {
+  background: #fff;
+  height: calc(100vh - 60px);
+  .IOT-tabs-bar {
+    margin: 0px;
+    padding-left: 20px;
+
+    border-bottom: 0px;
+    .IOT-tabs-tab {
+      padding: 18px 0;
+    }
+    .IOT-tabs-ink-bar {
+      width: 100% !important;
+    }
+  }
+  &-search {
+    margin: 10px;
+    background: @white;
+
+    // .IOT-form-inline .IOT-form-item-with-help {
+    //   margin-bottom: 0;
+    // }
+    .IOT-form-item-control {
+      line-height: 1;
+    }
+    .IOT-btn-primary {
+      width: 80px;
+    }
+
+    .IOT-select-selection__rendered {
+      overflow: hidden;
+      margin-right: 18px;
+      margin-left: 8px;
+    }
+    .basic-select {
+      .IOT-select-selection-selected-value {
+        height: 30px;
+        overflow: hidden;
+      }
+      .IOT-select-dropdown-menu-item {
+        border-bottom: 1px solid #efefef;
+      }
+      .item-id {
+        font-size: @smallFontSize;
+        color: @gray;
+      }
+    }
+    // .search-box {
+    //   position: relative;
+    //   display: inline-block;
+    //   border: 1px solid @gray-lighter;
+    //   box-sizing: border-box;
+    //   height: 36px;
+    //   &:before {
+    //     content: ' ';
+    //     position: absolute;
+    //     background: @black;
+    //     top: 8px;
+    //     left: 90px;
+    //     width: 1px;
+    //     height: 20px;
+    //     z-index: 9;
+    //   }
+
+    //   .IOT-select {
+    //     height: 100%;
+    //     width: auto;
+    //     .IOT-select-selection--single {
+    //       height: 34px;
+    //       line-height: 34px;
+    //     }
+    //   }
+    //   .IOT-select-search.IOT-select-search--inline {
+    //     height: 34px;
+    //     line-height: 34px;
+    //   }
+    //   .IOT-select-selection {
+    //     border: none;
+    //     box-shadow: none;
+    //     .IOT-select-arrow {
+    //       right: 6px;
+    //       color: @black;
+    //     }
+    //   }
+    //   .IOT-input {
+    //     border: none;
+    //     box-shadow: none;
+    //     height: 34px;
+    //   }
+    // }
+  }
+  &-list {
+    &-content {
+      height: 100%;
+      .list-item {
+        padding: @space5 20px @space5 40px;
+        background-color: @white;
+        line-height: 48px;
+        border-top: 1px solid @gray-lightest;
+      }
+      .list-empty-box {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .icon-null {
+          display: inline-block;
+          width: 120px;
+          height: 120px;
+          background: url(../../../static/pic/icon-null.png) center center
+            no-repeat;
+        }
+
+        .empty-text {
+          line-height: 24px;
+          color: #5d5d5d;
+          margin: 20px 0;
+          font-weight: bold;
+        }
+      }
+    }
+    .message-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .IOT-collapse-header {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      pre {
+        padding: 0;
+        margin: 0 0 0 20px;
+        text-align: left;
+        max-width: 400px;
+      }
+    }
+    .topic {
+      word-break: break-all;
+      line-height: 1.5;
+      padding: 0 10px;
+    }
+    .ellipsis {
+      padding: 0 10px;
+      .ellipsis();
+    }
+    .message {
+      display: inline-block;
+      width: 90%;
+      vertical-align: middle;
+    }
+    .break {
+      word-break: break-all;
+    }
+  }
+  .IOT-tabs-bar {
+    margin: 0px;
+    padding-left: 20px;
+    background: #fff;
+    // border-top: 1px solid #eaebee;
+    border-bottom: 0px;
+  }
+}
+
+.device-log-select {
+  .IOT-select-dropdown-menu-item {
+    padding: 5px 12px 0;
+    .option-box {
+      border-bottom: 1px solid #e8e8e8;
+      .option-name {
+        width: 100%;
+        display: inline-block;
+        .ellipsis();
+      }
+      .option-id {
+        width: 100%;
+        display: inline-block;
+        font-size: 12px;
+        color: @gray;
+        .ellipsis();
+      }
+    }
+    &-selected {
+      color: @primary;
+      font-weight: normal;
+    }
+  }
+}

@@ -1,0 +1,205 @@
+@import '~styles/variables.less';
+
+.device-info {
+  background: @white;
+  // 新布局样式
+  .basic-info-form {
+    padding: 16px;
+    .IOT-row .IOT-row.IOT-form-item .IOT-col.IOT-form-item-label {
+      min-width: 168px;
+    }
+  }
+
+  .tips {
+    display: -webkit-inline-box;
+    line-height: 1.5;
+    max-width: 400px;
+    min-width: 200px;
+    font-size: @smallFontSize;
+    color: @gray;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    // vertical-align: middle;
+    span {
+      height: 100%;
+      // display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  .IOT-select-selection__rendered {
+    overflow: hidden;
+    height: 30px;
+  }
+  .profiles {
+    .title-wrap {
+      .title {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+    .profiles-table {
+      .err-msg {
+        color: @red;
+        word-break: break-all;
+        word-wrap: break-word;
+        white-space: normal;
+      }
+    }
+  }
+  .btn-box {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+.tag-profiles {
+  margin-top: 10px;
+
+  .profiles {
+    // margin-top: 10px;
+    h3 {
+      margin-bottom: 30px;
+    }
+    .title {
+      font-size: @bigFontSize;
+      display: inline-block;
+      margin-right: 20px;
+      color: @black;
+      font-weight: bold;
+    }
+
+    .title-tip {
+      color: @gray;
+      // color: #8d8c8c;
+    }
+
+    .profiles-table {
+      // margin-top: 20px;
+
+      input.IOT-input {
+        width: 240px;
+      }
+
+      .IOT-table-thead > tr > th {
+        height: 58px;
+        text-align: center;
+        padding: 8px;
+        border-bottom: 1px solid #e8e8e8;
+      }
+
+      .IOT-table-tbody > tr > td {
+        text-align: center;
+        padding: 8px;
+        border-bottom: 1px solid #e8e8e8;
+        width: 35%;
+
+        .profile-input {
+          display: inline-block;
+          text-align: left;
+          margin: 0 auto;
+          // padding: 0 20px;
+          min-width: 400px;
+          text-align: center;
+
+          .required::before {
+            display: inline-block;
+            margin-right: 4px;
+            color: #006569;
+            font-size: 14px;
+            font-family: SimSun, sans-serif;
+            line-height: 1;
+            content: '*';
+          }
+
+          .profile-tip {
+            font-size: 12px;
+            color: @gray-light;
+            margin-left: 20px;
+          }
+        }
+        @media screen and (max-width: 1200px) {
+          .profile-input {
+            min-width: 300px;
+            input.IOT-input,
+            .IOT-select {
+              width: 200px !important;
+            }
+          }
+        }
+        .err-msg {
+          color: @red;
+          text-align: left;
+          line-height: 18px;
+        }
+
+        &.description {
+          width: 20%;
+        }
+
+        &.action {
+          width: 10%;
+        }
+      }
+
+      .IOT-btn.delete-btn {
+        color: @primary;
+        background: @back-gray;
+        border: none;
+
+        &:hover {
+          background-color: @edit-btn-hover-highlight;
+          color: @white;
+        }
+
+        &[disabled] {
+          background: @gray-lightest;
+          color: @gray;
+        }
+      }
+      .column-title {
+        display: inline-block;
+        width: 400px;
+        text-align: left;
+        text-indent: 110px;
+      }
+      @media screen and (max-width: 1200px) {
+        .column-title {
+          width: 300px;
+          text-indent: 80px;
+        }
+      }
+    }
+  }
+
+  .btn-box {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+.add-device-select {
+  .IOT-select-dropdown-menu-item {
+    padding: 5px 12px 0;
+
+    .option-box {
+      border-bottom: 1px solid #e8e8e8;
+
+      .option-id {
+        display: inline-block;
+        font-size: 12px;
+        color: @gray;
+        padding-bottom: 5px;
+      }
+    }
+
+    &-selected {
+      color: @primary;
+      font-weight: normal;
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@import '~styles/variables.less';
+
+.property-list {
+  .ta-l {
+    padding-left: 10px;
+  }
+  .func-list-title {
+    font-size: 12px;
+  }
+  .IOT-col {
+    text-align: center;
+  }
+  .obtain-height {
+    margin: 0;
+  }
+
+  .func-list-item {
+    &:nth-child(even) {
+      background-color: #f9f9fa;
+    }
+    &:hover {
+      background-color: #d9fcf7;
+    }
+    font-size: 12px;
+    line-height: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #efefef;
+    margin-top: -1px;
+    align-items: flex-start;
+    justify-content: space-between;
+    .ta-c {
+      text-align: center;
+    }
+    .cell {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &.hasPop {
+        cursor: pointer;
+      }
+      .IOTicon-down {
+        font-size: 8px;
+        color: @primary;
+        margin-left: @baseSpaceSmall;
+      }
+      .btn {
+        font-size: @smallFontSize;
+        padding: 0;
+        margin-left: 20px;
+        color: @primary;
+        height: auto;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .IOT-row-flex {
+    height: 30px;
+    flex-flow: row;
+    .IOT-col {
+      // overflow: hidden;
+      // white-space: nowrap;
+      // text-overflow: ellipsis;
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 3;
+
+      /* autoprefixer: ignore next */
+      -webkit-box-orient: vertical;
+      word-break: break-all;
+      // padding-left: 4px;
+      // padding-right: 4px;
+    }
+  }
+  .func-list-title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // width: 100%;
+
+    height: 34px;
+    color: #666;
+    background: #f7f7f7;
+
+    border-bottom: 1px solid @gray-lightest;
+    font-weight: 400;
+    .IOT-row {
+      // width: calc(100% + 20px);
+      display: flex;
+      align-items: center;
+    }
+  }
+}

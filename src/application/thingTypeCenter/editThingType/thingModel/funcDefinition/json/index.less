@@ -1,0 +1,62 @@
+@import '~styles/variables.less';
+
+.json-wrap {
+  .tooltip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 42px;
+    line-height: 42px;
+    .btn {
+      padding: 0;
+      margin-top: 6px;
+      margin-bottom: 6px;
+      font-size: @baseFontSize;
+      color: @primary;
+      &[disabled] {
+        color: rgba(0, 0, 0, 0.25);
+        background: transparent;
+      }
+    }
+    .line {
+      margin: 0 10px;
+    }
+    .tips {
+      color: @orange;
+      font-weight: bold;
+    }
+  }
+  .json-code {
+    // border: 1px solid @gray-lighter;
+    margin-bottom: 20px;
+    .json-obtain {
+      height: 400px;
+      margin: 0;
+      .err-msg {
+        color: @red;
+        font-size: @baseFontSize;
+        font-weight: bold;
+      }
+    }
+    &.disabled {
+      .json-obtain {
+        .monaco-editor {
+          .view-lines {
+            &::before {
+              display: block;
+              height: 100%;
+              width: 100%;
+              content: '';
+              background: rgba(0, 0, 0, 0.05);
+              z-index: 60;
+              cursor: not-allowed;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

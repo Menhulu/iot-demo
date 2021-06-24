@@ -1,0 +1,37 @@
+@import '~styles/variables.less';
+
+.search-input {
+  .search-input-wrap {
+    .IOT-input-group-addon {
+      background-color: @white;
+      border: none;
+      .IOT-select {
+        margin: -2px -11px;
+      }
+    }
+    .search-before {
+      border: 1px solid @gray-lighter;
+      border-right: none;
+      .IOT-select-selection-selected-value {
+        font-size: @baseFontSize;
+        color: @black;
+      }
+      .IOT-select-arrow .IOT-select-arrow-icon {
+        color: @black;
+      }
+      .IOT-select-selection--single .IOT-select-selection__rendered {
+        margin: 6px 0;
+        padding-left: 10px;
+        line-height: 20px;
+        border-right: 1px solid @gray-lighter;
+      }
+    }
+    .IOT-input {
+      border-color: @gray-lighter;
+      border-left: none;
+    }
+    .search-input {
+      font-size: @baseFontSize;
+    }
+  }
+}

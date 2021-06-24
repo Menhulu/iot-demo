@@ -1,0 +1,157 @@
+@import '~styles/variables.less';
+// 拓扑设备列表页面
+
+.topo-list-wrap {
+  .icon-reval:before {
+    color: @primary;
+  }
+  .IOT-form-inline {
+    margin: 20px;
+
+    .IOT-btn + .IOT-btn {
+      margin-left: 20px;
+    }
+  }
+
+  .table-title {
+    margin: 20px 0 4px 0;
+    padding: 0 20px;
+    .IOT-btn + .IOT-btn {
+      margin-right: 20px;
+    }
+    h3 {
+      font-size: @bigFontSize;
+    }
+  }
+  .IOT-table {
+    .IOT-btn + .IOT-btn {
+      margin-left: 10px;
+    }
+    .IOT-table-thead > tr > th {
+      padding: 14px;
+    }
+    .IOT-table-tbody > tr > td {
+      padding: 6px;
+      .offline {
+        color: @red;
+      }
+      .online {
+        color: @green;
+      }
+      &.ant-table-selection-column {
+        padding: 14px;
+      }
+    }
+  }
+  .list-empty-box {
+    text-align: center;
+    margin: 20px auto;
+    .icon-null {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: url(../../../static/pic/icon-null.png) center center no-repeat;
+      background-size: cover;
+    }
+    .empty-text {
+      line-height: 24px;
+      color: #b6b6b6;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+  .add-topo {
+    .IOT-form-item {
+      margin-bottom: 0px;
+    }
+    padding: 10px;
+    overflow: auto;
+    .basic-info-wrap {
+      margin: 0 20px;
+
+      .basic-info-main {
+        .btn-box {
+          text-align: center;
+          margin-top: 40px;
+        }
+        .title-wrap {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .title1 {
+            font-size: @bigFontSize;
+            padding: 10px 0 20px 0;
+          }
+          .title2 {
+            position: relative;
+            right: 0;
+            margin-right: 20px;
+          }
+        }
+        .basic-select {
+          .IOT-select-selection-selected-value {
+            height: 30px;
+            overflow: hidden;
+          }
+          .IOT-select-dropdown-menu-item {
+            border-bottom: 1px solid #efefef;
+          }
+          .item-id {
+            font-size: @smallFontSize;
+            color: @gray;
+          }
+        }
+        .tips {
+          margin-left: 20px;
+          font-size: @smallFontSize;
+          color: @gray;
+        }
+      }
+      .protocol-profile {
+        .title {
+          margin: 16px 0 16px 0;
+        }
+      }
+    }
+  }
+}
+.state-grid-modal {
+  .assoicate-modal-content-wrap {
+    text-align: left;
+    padding: 20px 20px 20px 20px;
+    .basic-con {
+      position: relative;
+      min-height: 36px;
+      line-height: 36px;
+      padding: 10px 0 10px 130px;
+      font-size: 16px;
+      dt {
+        position: absolute;
+        left: 30px;
+        width: 80px;
+        text-align: right;
+      }
+      dd {
+        position: relative;
+        .err-msg {
+          font-size: @smallFontSize;
+          line-height: 1.25;
+          color: @red;
+          margin-top: 5px;
+          position: absolute;
+        }
+        .input-s {
+          &.error {
+            border-color: @red;
+          }
+        }
+      }
+      .input-s {
+        width: 280px;
+      }
+    }
+  }
+}
+.padding-rb-16 {
+  padding: 0 16px 16px 0;
+}

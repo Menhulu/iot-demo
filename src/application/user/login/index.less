@@ -1,0 +1,125 @@
+@import '~styles/variables.less';
+.login-wrap {
+  height: 100vh;
+  background-image: url('../../../static/loginBack.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  .FormWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .form-title {
+      text-align: center;
+      font-size: @biggestFontSize;
+    }
+    .login-form {
+      display: block;
+      height: 256px;
+      padding: 40px 66px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.3);
+      box-shadow: inset 0 0 20px 0 rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      border-radius: 8px;
+    }
+
+    .IOT-form-item {
+      margin-top: 24px;
+
+      .IOT-form-item-label {
+        line-height: 40px;
+      }
+
+      .login-form-button {
+        margin-left: 32px;
+        height: 40px;
+        line-height: 40px;
+        width: 248px;
+
+        border-radius: 3px;
+        border-radius: 3px;
+      }
+
+      .IOT-form-explain {
+        margin-top: 5px;
+        text-align: left;
+      }
+    }
+
+    .IOT-form-item:first-of-type {
+      margin-top: 0px;
+    }
+
+    .IOT-form-item:nth-child(3) {
+      text-align: center;
+    }
+
+    input.IOT-input {
+      width: 248px;
+      height: 40px;
+      background: rgba(32, 53, 128, 0.01) !important;
+      border: 1px solid rgba(32, 53, 128, 0.16);
+      border-radius: 3px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    input.IOT-input::-webkit-input-placeholder {
+      /*Webkit browsers*/
+      color: #7e7e7e;
+      font-size: 12px;
+    }
+
+    .err-msg {
+      color: @red;
+      text-align: left !important;
+      margin-bottom: 10px;
+      line-height: 1;
+
+      .IOT-form-item-control {
+        height: 20px;
+      }
+    }
+
+    .login-btn-box {
+      text-align: center;
+    }
+
+    .err-msg {
+      color: @red;
+      text-align: left !important;
+      margin-bottom: 10px;
+      line-height: 1;
+
+      .IOT-form-item-control {
+        height: 20px;
+      }
+    }
+    .login-btn-box {
+      text-align: center;
+    }
+  }
+  &.lishui {
+    background-image: url('../../../static/ls-loginBack.jpg');
+    .form-title {
+      text-align: center;
+      font-size: @superFontSize;
+      margin-bottom: 40px;
+      color: #006569;
+      line-height: 32px;
+    }
+    .IOT-form-item-required::before {
+      color: #006569;
+    }
+    .FormWrapper {
+      .login-form-button {
+        background: #006569;
+        margin-left: 48px;
+      }
+    }
+  }
+}

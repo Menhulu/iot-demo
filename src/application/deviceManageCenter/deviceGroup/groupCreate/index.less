@@ -1,0 +1,61 @@
+@import '~styles/variables.less';
+.dev-group-create {
+  padding: 16px;
+  height: 100%;
+  overflow-y: auto;
+  header {
+    margin-bottom: 16px;
+    .title {
+      font-size: @bigFontSize;
+      color: @black;
+      font-weight: 500;
+    }
+  }
+  .level-group {
+    display: flex;
+    .level:first-child {
+      border-right: none;
+    }
+    .level {
+      width: 283px;
+      height: 204px;
+      overflow-y: auto;
+      border: 1px solid #d8d8d8;
+      box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+      .item {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 10px;
+        cursor: pointer;
+        &:hover {
+          background: @hover-highlight;
+        }
+        &.selected {
+          background: @hover-highlight;
+        }
+      }
+      .text {
+        font-size: @smallFontSize;
+        color: @baseFontColor;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  .group-info {
+    dl {
+      display: flex;
+      dt {
+        width: 176px;
+        .title {
+          font-size: @bigFontSize;
+          color: @black;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

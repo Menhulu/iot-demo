@@ -1,0 +1,20 @@
+import React, { useReducer, createContext } from 'react';
+
+export default function createCtx<StateType, ActionType>(
+  reducer: React.Reducer<StateType, ActionType>,
+  initialState: StateType
+) {
+  const defaultDispatch: React.Dispatch<ActionType> = () => initialState;
+  const ctx = createContext({
+    state: initialState,
+    dispatch: defaultDispatch,
+  });
+  function Provider(props: React.PropsWithChildren<{}>) {
+    const [state, dispatch] = useReducer<React.Reducer<StateType, ActionType>>(
+      reducer,
+      initialState
+    );
+    return <ctx.Provider value={{ state, dispatch }} {...props} />;
+  }
+  return [ctx, Provider] as const;
+}

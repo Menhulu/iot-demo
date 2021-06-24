@@ -1,0 +1,239 @@
+@import '~styles/variables.less';
+.device-list-container {
+  height: 100%;
+  font-size: 12px;
+  .mheader {
+    .icon-products {
+      margin: 0 10px;
+    }
+    .deviceMetaName {
+      display: inline-block;
+      min-width: 60px;
+    }
+    .meta-empty-text {
+      color: @orange;
+    }
+    .divided {
+      display: inline-block;
+      width: 1px;
+      height: 20px;
+      background: @gray;
+      vertical-align: middle;
+    }
+  }
+  .operation-list {
+    .IOT-popover-inner-content {
+      .IOT-btn {
+        margin: 0 !important;
+      }
+    }
+  }
+  .text-center {
+    text-align: center;
+  }
+  .device-status {
+    &.default {
+      color: @gray;
+    }
+    &.offline {
+      color: @red;
+    }
+    &.online {
+      color: @green;
+    }
+  }
+  .stable-wrap {
+    th.hidden,
+    td.hidden {
+      display: none;
+    }
+  }
+}
+
+.delegate-management {
+  .container-header-content {
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid #d9d9d9;
+
+    .IOT-input-group-wrapper {
+      width: 400px;
+    }
+  }
+
+  .terminal-wrap {
+    padding: 20px 40px;
+  }
+
+  .table-title {
+    margin: 20px 0;
+
+    .IOT-btn + .IOT-btn {
+      margin-right: 20px;
+    }
+  }
+
+  .IOT-table {
+    .IOT-btn + .IOT-btn {
+      margin-left: 10px;
+    }
+    .select-all {
+      position: relative;
+      .IOT-checkbox-wrapper {
+        position: absolute;
+        display: block;
+        width: 64px;
+        left: 50%;
+        transform: translateX(-8px);
+      }
+    }
+  }
+  .list-empty-box {
+    height: calc(100% - 59px);
+    text-align: center;
+    margin: 100px auto;
+    .icon-null {
+      display: inline-block;
+      width: 120px;
+      height: 120px;
+      background: url(../../static/pic/icon-null.png) center center no-repeat;
+    }
+    .empty-text {
+      line-height: 24px;
+      color: #b6b6b6;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
+.device-meta-hover {
+  position: relative;
+  width: 220px;
+  .IOT-popover-inner-content {
+    max-height: 245px;
+    overflow-y: auto;
+    border: 1px solid @gray-lighter;
+    padding: 0;
+    padding-bottom: 32px;
+    .meta-item {
+      padding: 10px 10px 0;
+      cursor: pointer;
+      &-inline {
+        position: relative;
+        border-bottom: 1px solid @gray-lighter;
+        .check {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+      &-id {
+        display: inline-block;
+        width: 200px;
+        font-size: 12px;
+        color: @gray-light;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      &:hover {
+        background-color: @hover-highlight;
+        color: @primary;
+      }
+    }
+    .active {
+      color: @primary;
+      background-color: @hover-highlight;
+    }
+    .search-input-box {
+      position: absolute;
+      bottom: 0;
+      padding: 5px 10px;
+      border-top: 1px solid @gray-lighter;
+      background-color: @white;
+      .IOT-input-search {
+        .IOT-input {
+          height: 24px;
+          box-shadow: none;
+        }
+        .IOT-btn {
+          height: 24px;
+          width: 24px;
+          padding: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+// 标签搜索的popover的样式
+// .search-tag-popover {
+//   width: 462px;
+//   left: 405px;
+
+//   .IOT-popover-inner {
+//     padding: 8px;
+//   }
+
+//   .IOT-popover-inner,
+//   .IOT-popover-arrow {
+//     border: 1px solid #d8d8d8;
+//     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.3);
+//   }
+//   .IOT-popover-arrow {
+//     border-left-color: #d8d8d8 !important;
+//     border-top-color: #d8d8d8 !important;
+//     background: #fff;
+//   }
+//   .tips {
+//     font-size: @baseFontSize;
+//     color: @gray;
+//     margin-bottom: 20px;
+//   }
+//   .list {
+//     .item {
+//       .IOT-input {
+//         width: 178px;
+//         margin-right: 10px;
+//       }
+//       .del-btn-wrap {
+//         display: inline-block;
+//         vertical-align: middle;
+//         cursor: pointer;
+//         .del-btn {
+//           display: flex;
+//           align-items: center;
+//           justify-content: center;
+//           width: 36px;
+//           height: 36px;
+//           border-radius: 50%;
+//           background: @back-green;
+//           color: @primary;
+//         }
+//       }
+//       margin-bottom: 10px;
+//     }
+//   }
+//   .add-btn {
+//     margin-top: 20px;
+//     color: @primary;
+//     cursor: pointer;
+//     &.disabled {
+//       cursor: not-allowed;
+//       color: @gray-light;
+//     }
+//   }
+//   .btn-group {
+//     text-align: center;
+//     margin-top: 30px;
+//     .btn {
+//       width: 90px;
+//       margin: 0 10px;
+//       &.btn-default {
+//         border: 1px solid @gray-lighter;
+//         background: @white-off;
+//       }
+//     }
+//   }
+// }

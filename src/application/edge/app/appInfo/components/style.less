@@ -1,0 +1,39 @@
+@import '~styles/base.less';
+.device-status {
+  &.default {
+    color: @gray;
+  }
+  &.offline {
+    color: @red;
+  }
+  &.online {
+    color: @green;
+  }
+}
+.desc {
+  color: @gray-light;
+}
+.err-msg {
+  color: @red;
+}
+.upload-pro{
+  .upload-progress{
+    width: 80%
+  }
+  .upload-cancel-btn{
+    margin: @baseSpace;
+    width: 8%;
+    cursor: pointer
+  }
+}
+
+.IOT-form-item-control{
+  .IOT-form-item-children{
+    display: flex;
+    .rule-tips{
+      cursor: pointer;
+      margin-left: @baseSpace
+    }
+  }
+}
+  

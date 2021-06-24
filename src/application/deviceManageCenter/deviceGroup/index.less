@@ -1,0 +1,72 @@
+@import '~styles/variables.less';
+.device-group {
+  &-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    overflow: hidden;
+  }
+  &-tree {
+    width: 234px;
+    height: 100%;
+    border: 1px solid @gray-lighter;
+    &-header {
+      height: 40px;
+      background: @back-gray;
+      border-bottom: 1px solid @gray-lighter;
+      padding: 13px 20px;
+      .title {
+        font-weight: bold;
+      }
+      .icon-add-to {
+        font-size: @smallFontSize;
+      }
+    }
+    &-content {
+      background: @white;
+      height: calc(100% - 40px);
+      padding: 8px;
+      overflow-y: scroll;
+      .IOT-tree {
+        li {
+          padding: 0;
+          .IOT-tree-node-content-wrapper.IOT-tree-node-selected {
+            background: @white;
+            color: @primary;
+          }
+        }
+        .IOT-tree-node-content-wrapper {
+          width: calc(100% - 24px);
+
+          .IOT-tree-title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .group-name {
+              flex: 1;
+              display: inline-block;
+              max-width: 120px;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              margin-right: 10px;
+            }
+            .IOT-btn {
+              padding: 0 5px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-main {
+    height: 100%;
+    width: calc(100% - 234px);
+    background: @white;
+    // padding: 40px;
+    overflow: hidden;
+  }
+}

@@ -1,0 +1,476 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('fonts/iconfont.ttf?i3eaoa') format('truetype'), url('fonts/iconfont.woff?i3eaoa') format('woff'), url('fonts/iconfont.svg?i3eaoa#iconfont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'iconfont' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-edge-computing:before {
+  content: "\e96b";
+}
+
+.icon-edge:before {
+  content: "\e96a";
+}
+
+.icon-ruleengine:before {
+  content: "\e966";
+}
+
+.icon-start-job:before {
+  content: "\e963";
+}
+
+.icon-pause-job:before {
+  content: "\e964";
+}
+
+.icon-cancel-job:before {
+  content: "\e965";
+}
+
+.icon-job:before {
+  content: "\e962";
+}
+
+.icon-poweroff:before {
+  content: "\e961";
+}
+
+.icon-dot:before {
+  content: "\e960";
+}
+
+.icon-required-1:before {
+  content: "\e95c";
+}
+
+.icon-start:before {
+  content: "\e95e";
+}
+
+.icon-stop:before {
+  content: "\e95f";
+}
+
+.icon-reval:before {
+  content: "\e95d";
+  color: #555;
+}
+
+.icon-core-param:before {
+  content: "\e95a";
+}
+
+.icon-func-intro:before {
+  content: "\e959";
+}
+
+.icon-device-data:before {
+  content: "\e954";
+}
+
+.icon-use:before {
+  content: "\e955";
+}
+
+.icon-statistics:before {
+  content: "\e956";
+}
+
+.icon-android-line:before {
+  content: "\e950";
+}
+
+.icon-ios-line:before {
+  content: "\e951";
+}
+
+.icon-android:before {
+  content: "\e952";
+}
+
+.icon-ios:before {
+  content: "\e953";
+}
+
+.icon-v:before {
+  content: "\e946";
+}
+
+.icon-doc-device:before {
+  content: "\e943";
+}
+
+.icon-doc-download:before {
+  content: "\e944";
+}
+
+.icon-dow:before {
+  content: "\e941";
+}
+
+.icon-upload:before {
+  content: "\e942";
+}
+
+.icon-family:before {
+  content: "\e93d";
+}
+
+.icon-unknown:before {
+  content: "\e93e";
+}
+
+.icon-man:before {
+  content: "\e93f";
+}
+
+.icon-girl:before {
+  content: "\e940";
+}
+
+.icon-manages:before {
+  content: "\e93b";
+}
+
+.icon-open:before {
+  content: "\e937";
+}
+
+.icon-merge:before {
+  content: "\e938";
+}
+
+.icon-products:before {
+  content: "\e939";
+}
+
+.icon-apply:before {
+  content: "\e93a";
+}
+
+.icon-data:before {
+  content: "\e93c";
+}
+
+.icon-manage:before {
+  content: "\e936";
+}
+
+.icon-furnishing:before {
+  content: "\e932";
+}
+
+.icon-healthy:before {
+  content: "\e933";
+}
+
+.icon-car:before {
+  content: "\e934";
+}
+
+.icon-examine:before {
+  content: "\e935";
+}
+
+.icon-success:before {
+  content: "\e931";
+}
+
+.icon-wait:before {
+  content: "\e930";
+}
+
+.icon-email:before {
+  content: "\e92f";
+  color: #626262;
+}
+
+.icon-import:before {
+  content: "\e92e";
+}
+
+.icon-video:before {
+  content: "\e929";
+  color: #626262;
+}
+
+.icon-frontend:before {
+  content: "\e92a";
+  color: #626262;
+}
+
+.icon-download2:before {
+  content: "\e92b";
+  color: #626262;
+}
+
+.icon-speed:before {
+  content: "\e92c";
+  color: #626262;
+}
+
+.icon-icon_device:before {
+  content: "\e92d";
+  color: #626262;
+}
+
+.icon-split:before {
+  content: "\e928";
+  color: #626262;
+}
+
+.icon-retract:before {
+  content: "\e927";
+  color: #979797;
+}
+
+.icon-audit:before {
+  content: "\e925";
+}
+
+.icon-debug:before {
+  content: "\e926";
+}
+
+.icon-control:before {
+  content: "\e91f";
+}
+
+.icon-refresh:before {
+  content: "\e920";
+}
+
+.icon-unchecked:before {
+  content: "\e921";
+}
+
+.icon-download:before {
+  content: "\e922";
+}
+
+.icon-checked:before {
+  content: "\e923";
+}
+
+.icon-hide:before {
+  content: "\e924";
+}
+
+.icon-locked:before {
+  content: "\e91d";
+}
+
+.icon-sandbox:before {
+  content: "\e91e";
+}
+
+.icon-close-two:before {
+  content: "\e91c";
+}
+
+.icon-mored:before {
+  content: "\e918";
+}
+
+.icon-error:before {
+  content: "\e919";
+}
+
+.icon-upico:before {
+  content: "\e91a";
+}
+
+.icon-dowico:before {
+  content: "\e91b";
+}
+
+.icon-selected:before {
+  content: "\e916";
+}
+
+.icon-check-mark:before {
+  content: "\e917";
+}
+
+.icon-version:before {
+  content: "\e902";
+}
+
+.icon-edit:before {
+  content: "\e903";
+}
+
+.icon-see:before {
+  content: "\e904";
+}
+
+.icon-product:before {
+  content: "\e905";
+}
+
+.icon-service:before {
+  content: "\e906";
+}
+
+.icon-revoke:before {
+  content: "\e907";
+}
+
+.icon-send:before {
+  content: "\e908";
+}
+
+.icon-close:before {
+  content: "\e909";
+}
+
+.icon-linklog:before {
+  content: "\e90a";
+}
+
+.icon-lock-off:before {
+  content: "\e90b";
+}
+
+.icon-delete:before {
+  content: "\e90c";
+}
+
+.icon-device:before {
+  content: "\e90d";
+}
+
+.icon-seal:before {
+  content: "\e90e";
+}
+
+.icon-search:before {
+  content: "\e90f";
+}
+
+.icon-lock:before {
+  content: "\e910";
+}
+
+.icon-help:before {
+  content: "\e911";
+}
+
+.icon-add-to:before {
+  content: "\e912";
+}
+
+.icon-document:before {
+  content: "\e913";
+}
+
+.icon-news:before {
+  content: "\e914";
+}
+
+.icon-usercenter:before {
+  content: "\e915";
+}
+
+.icon-direc-right:before {
+  content: "\e900";
+}
+
+.icon-direc-left:before {
+  content: "\e901";
+}
+
+.icon-key:before {
+  content: "\e945";
+  color: #626262;
+}
+
+.icon-listen:before {
+  content: "\e94f";
+}
+
+.icon-code:before {
+  content: "\e94e";
+}
+
+.icon-kw:before {
+  content: "\e947";
+}
+
+.icon-fun:before {
+  content: "\e948";
+}
+
+.icon-sum:before {
+  content: "\e949";
+}
+
+.icon-aug:before {
+  content: "\e94a";
+}
+
+.icon-max:before {
+  content: "\e94b";
+}
+
+.icon-min:before {
+  content: "\e94c";
+}
+
+.icon-img:before {
+  content: "\e94d";
+}
+
+.icon-trend-down:before {
+  content: "\e957";
+}
+
+.icon-trend-up:before {
+  content: "\e958";
+}
+
+.icon-monitor:before {
+  content: "\e967";
+}
+
+.icon-topo:before {
+  content: "\e968";
+}
+
+.icon-sanjiao:before {
+  content: "\e969";
+}
+
+.icon-home2:before {
+  content: "\e95b";
+}
+
+.icon-eye:before {
+  content: "\e9ce";
+}
+
+.icon-eye-blocked:before {
+  content: "\e9d1";
+}
+
+.icon-question:before {
+  content: "\ea09";
+}

@@ -1,0 +1,54 @@
+#!/bin/bash
+cd "$(dirname $0)" || exit 1
+dir=`pwd`
+echo $dir
+proc_name=nginx
+
+links(){
+rm -rf /export/Instances/webconsole-static/nginx_static
+ln -sf $dir  /export/Instances/webconsole-static/nginx_static
+}
+
+
+help(){
+    echo "${0} <start|stop|restart|status>"
+    exit 1
+}
+check() {
+ps -ef | grep $proc_name | grep -v grep
+}
+
+start() {
+   check
+   if [ $? = 0 ]; then
+        echo "[WARN] $proc_name is aleady running!"
+        return 1
+    fi
+  sudo  /export/servers/nginx-1.16.1/sbin/nginx 
+    
+}
+
+
+stop() {
+  check
+  if [ $? = 0 ];then
+   sudo  /export/servers/nginx-1.16.1/sbin/nginx -s stop
+   fi 
+}
+
+
+case "${1}" in
+    start)
+        links && start
+        ;;
+    stop)
+        stop
+        ;;
+    restart)
+        stop && start
+        ;;
+    *)
+        help
+        ;;
+esac
+

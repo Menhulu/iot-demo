@@ -1,0 +1,60 @@
+@import '~styles/variables.less';
+
+.pop-over {
+  font-size: @smallFontSize;
+  width: 200px;
+  text-align: center;
+  .list-popover-content {
+    .tit {
+      text-align: left;
+    }
+    .list {
+      .item {
+        text-align: left;
+      }
+    }
+  }
+}
+
+.fun-property-wrap {
+  .tooltip {
+    .add-btn {
+      padding: 0;
+      margin-top: 6px;
+      margin-bottom: 6px;
+      font-size: @smallFontSize;
+      color: @primary;
+    }
+    &.no-btn {
+      margin-bottom: @baseSpace;
+    }
+  }
+
+  .property-list {
+    .stable-wrap {
+      padding: 0;
+    }
+  }
+
+  .IOT-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .IOT-empty-image {
+      display: inline-block;
+      width: 120px;
+      height: 120px;
+    }
+
+    .IOT-empty-description {
+      line-height: 24px;
+      color: @gray-deeper;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+}

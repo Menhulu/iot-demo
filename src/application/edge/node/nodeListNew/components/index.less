@@ -1,0 +1,128 @@
+@import '~styles/variables.less';
+.IOT-advanced-search-form {
+  padding: 8px 16px 0;
+  .IOT-form-item {
+    display: flex;
+
+    .IOT-form-item-label {
+      width: 90px;
+      // text-align: left;
+    }
+    .IOT-form-item-control-wrapper {
+      flex: 1;
+    }
+  }
+
+  .IOT-select .IOT-select-selection--single {
+    height: 30px;
+    .IOT-select-selection__rendered {
+      line-height: 30px;
+    }
+  }
+
+  .search-box {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid @gray-lighter;
+    &:before {
+      content: ' ';
+      position: absolute;
+      background: @black;
+      top: 8px;
+      left: 100px;
+      width: 1px;
+      height: 20px;
+      z-index: 9;
+    }
+    .IOT-select-selection {
+      border: none;
+      box-shadow: none;
+      .IOT-select-arrow {
+        right: 6px;
+        color: @black;
+      }
+    }
+    .IOT-input {
+      width: 260px;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  .small-select {
+    width: 160px;
+    margin-right: 10px;
+  }
+  .search-btn {
+    width: 80px !important;
+  }
+  .search-tag-container {
+    text-align: center;
+    .tips {
+      font-size: @smallFontSize;
+      color: @gray;
+    }
+    .list {
+      .item {
+        .IOT-input {
+          width: 178px;
+          margin-right: 10px;
+        }
+        .IOT-select {
+          width: 178px;
+          margin-right: 10px;
+        }
+        .del-btn-wrap {
+          display: inline-block;
+          vertical-align: middle;
+          cursor: pointer;
+          .del-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #eaebee;
+            color: @primary;
+          }
+        }
+        .err-msg {
+          color: @red;
+        }
+        margin-bottom: 10px;
+      }
+    }
+    .add-btn {
+      color: @primary;
+      cursor: pointer;
+      &.disabled {
+        cursor: not-allowed;
+        color: @gray-light;
+      }
+    }
+  }
+  .error-info {
+    position: absolute;
+    top: 52px;
+    left: 140px;
+    font-size: 12px;
+    color: @red;
+  }
+
+  .IOT-btn {
+    height: 28px;
+    width: 60px;
+
+    &:hover {
+      background-color: @btn-hover-highlight;
+    }
+  }
+  .more-search {
+    display: inline-block;
+    margin-right: 10px;
+    .show-text {
+      margin-right: 6px;
+    }
+  }
+}

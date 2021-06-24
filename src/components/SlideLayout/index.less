@@ -1,0 +1,39 @@
+@import '~styles/variables.less';
+
+.slide-box {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  -webkit-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  opacity: 0;
+  top: 100%;
+
+  &.slide-box-show {
+    opacity: 1;
+    top: 0;
+  }
+
+  .slide-content {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    background: @white;
+    height: 100%;
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      color: @primary;
+
+      .double-down {
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

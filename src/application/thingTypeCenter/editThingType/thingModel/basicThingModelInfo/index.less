@@ -1,0 +1,55 @@
+@import 'styles/variables.less';
+.basic-info-form.thing-model-brief {
+  .IOT-row {
+    &.basic-form-row.align-top {
+      // align-items: f
+    }
+    .IOT-row {
+      &.IOT-form-item {
+        .IOT-col.IOT-form-item-label {
+          min-width: 120px;
+        }
+        .IOT-col.IOT-form-item-control-wrapper {
+          min-width: 100px;
+        }
+      }
+    }
+  }
+
+  .switch-version {
+    display: inline-block;
+
+    min-width: 56px;
+  }
+  .uploadmodel-area {
+    display: inline-block;
+    color: @primary;
+    margin-right: 16px;
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+    .upload {
+      display: inline-block;
+      display: flex;
+      align-items: center;
+    }
+    .IOT-upload-list {
+      .IOT-upload-list-item {
+        margin: 0;
+      }
+    }
+  }
+
+  .version-area {
+    background: @white;
+
+    width: 100%;
+    text-align: right;
+    .view-history {
+      color: @primary;
+      cursor: pointer;
+
+      padding: 0 20px;
+    }
+  }
+}

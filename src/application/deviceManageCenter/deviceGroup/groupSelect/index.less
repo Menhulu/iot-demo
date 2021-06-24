@@ -1,0 +1,33 @@
+@import '~styles/variables.less';
+.device-group-select {
+  // height: calc(100% - 40px);
+  height: 100%;
+  padding: 0 20px;
+  overflow-y: scroll;
+  margin-right: 20px;
+  &-header {
+    height: 36px;
+    line-height: 36px;
+    margin-bottom: 16px;
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  .stable-wrap {
+    padding: 0;
+  }
+  footer {
+    margin: 20px 0;
+    text-align: center;
+    .btn {
+      width: 90px;
+      margin: 0 10px;
+      &.default {
+        border: 1px solid @gray-lighter;
+        background-color: @white-off;
+        color: @gray;
+      }
+    }
+  }
+}

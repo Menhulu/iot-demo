@@ -1,0 +1,42 @@
+@import '~styles/variables.less';
+.group-edit-sll {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  .group-edit-body {
+    height: 100%;
+    overflow-y: auto;
+    .IOT-tabs {
+      height: 100%;
+    }
+    .IOT-tabs-content {
+      height: 100%;
+    }
+    .IOT-tabs-bar {
+      margin: 0px;
+      padding-left: 20px;
+      background: #fff;
+      border-bottom: 0px;
+      .IOT-tabs-tab {
+        padding: 18px 0;
+      }
+      .IOT-tabs-ink-bar {
+        // width: 100% !important;
+      }
+    }
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px;
+    .tit {
+      font-size: @bigFontSize;
+      color: @black;
+      font-weight: 600;
+    }
+    .btn {
+      width: 124px;
+    }
+  }
+}

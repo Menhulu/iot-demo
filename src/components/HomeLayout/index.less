@@ -1,0 +1,285 @@
+@import '~styles/variables.less';
+@import '~styles/cityos.less';
+
+.IOT-menu-submenu-title {
+  a {
+    padding-left: 0px;
+    display: block;
+    height: 100%;
+  }
+}
+
+.IOT-layout-header {
+  position: relative;
+  height: 50px;
+  padding: 10px;
+  line-height: 1;
+  background: @somber;
+}
+.IOT-layout-content {
+  background: @white;
+}
+
+.IOT-layout-sider-has-trigger {
+  padding-bottom: 0;
+}
+
+.IOT-layout.IOT-layout-has-sider {
+  height: calc(100vh - 60px);
+}
+
+.IOT-layout-sider {
+  padding-top: 21px;
+  background: @menu-dark;
+  .IOT-layout-sider-children {
+    // position: fixed;
+    top: 81px;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+  }
+  .IOT-menu-dark {
+    width: 200px;
+    background: @menu-dark;
+    height: auto;
+    .IOT-menu-submenu-title {
+      font-size: @baseFontSize;
+
+      &[aria-expanded='true'] {
+        background: @menu-expand;
+        color: @active;
+      }
+
+      background: @submenu-title;
+      color: @white;
+      margin-top: 1px;
+      margin-bottom: 0;
+      height: 38px;
+      line-height: 38px;
+
+      .IOTicon {
+        font-size: 18px;
+        margin-right: 5px;
+      }
+
+      &:hover {
+        color: @white;
+        background: @menu-hover;
+      }
+
+      .icon {
+        margin-right: 15px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .IOT-menu-sub {
+      color: @white;
+      background: @menu-dark;
+
+      .IOT-menu-item {
+        margin-top: 1px;
+        margin-bottom: 0;
+        background: @black-gray;
+        font-size: @baseFontSize;
+        height: 36px;
+        line-height: 36px;
+
+        .IOTicon {
+          font-size: 14px;
+          margin-right: 5px;
+        }
+
+        i {
+          margin-right: 5px;
+        }
+
+        &.IOT-menu-item-selected {
+          color: @active;
+          background: @black-gray;
+
+          a {
+            color: @active;
+          }
+
+          &:hover a {
+            color: @white;
+          }
+        }
+
+        &:hover {
+          color: @white;
+          background: @menu-hover;
+        }
+      }
+      .IOT-menu-submenu-title {
+        color: @white;
+        background: @black-gray;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        .icon {
+          margin-right: 3px;
+          margin-left: -5px;
+          transform: scale(0.5);
+        }
+      }
+    }
+  }
+
+  .IOT-menu-inline-collapsed {
+    width: 50px;
+
+    .IOT-menu-submenu > .IOT-menu-submenu-title {
+      left: 0;
+      padding: 0 20px !important;
+      text-overflow: clip;
+    }
+  }
+
+  .IOT-layout-sider-trigger {
+    position: absolute;
+    // min-width: 230px !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: #4b4b4b;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 10px;
+
+    .side-nav-foldBtn {
+      height: 21px;
+      line-height: 21px;
+      background: @menu-expand;
+      text-align: center;
+      width: 100%;
+
+      .icon {
+        display: inline-block;
+        width: 11px;
+        height: 13px;
+        background: url('../../static/pic/icon-fold.png') 0 0 no-repeat;
+        background-position: 0 0;
+
+        &.icon-collapsed {
+          background-position: 0 -20px;
+        }
+      }
+    }
+  }
+
+  .IOT-menu {
+    a,
+    a:link {
+      color: @white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  }
+}
+
+.IOT-menu-item > a {
+  color: @white;
+}
+
+.IOT-menu-submenu-popup.IOT-menu-dark {
+  .IOT-menu-sub {
+    min-width: 100px;
+    background: @submenu-pop-bg;
+
+    a {
+      color: @white;
+    }
+  }
+
+  .IOT-menu-item {
+    margin: 0;
+    border-radius: 4px;
+    height: 36px;
+    line-height: 36px;
+
+    &:hover {
+      background-color: @submenu-pop-active-bg;
+
+      a:hover {
+        color: @white;
+      }
+    }
+  }
+
+  .IOT-menu-item-selected {
+    background-color: @submenu-pop-active-bg;
+
+    a {
+      color: @active;
+    }
+  }
+}
+
+.container-header {
+  background: #fff;
+
+  a {
+    color: #000;
+  }
+
+  .container-header-title {
+    color: #494949;
+    padding: 16px 40px;
+
+    .title {
+      display: inline-block;
+      height: 36px;
+      line-height: 36px;
+      font-size: @biggerFontSize;
+      color: #535353;
+      font-weight: 700;
+
+      a {
+        color: @primary;
+        font-weight: normal;
+        font-size: @baseFontSize;
+
+        .go-back {
+          .icon {
+            font-size: @biggerFontSize;
+          }
+
+          .IOTicon-left {
+            font-size: @biggerFontSize;
+            margin-right: 10px;
+          }
+
+          .text {
+            display: inline-block;
+            vertical-align: top;
+          }
+        }
+      }
+    }
+  }
+}
+
+.obtain-height {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+.IOT-layout-sider {
+  .archive-threeMenu {
+    .IOT-menu-submenu-title {
+      background: #191919 !important;
+
+      span {
+        span {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+}

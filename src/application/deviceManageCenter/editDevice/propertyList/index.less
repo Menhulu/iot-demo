@@ -1,0 +1,57 @@
+@import '~styles/variables.less';
+.device-property-list {
+  padding: 16px;
+  background: @white;
+  .table-action-bar {
+    text-align: right;
+    margin-bottom: 16px;
+    .device-status-wrap {
+      display: inline-block;
+      padding: 8px 16px;
+      .device-status {
+        &.default {
+          color: @gray;
+        }
+        &.offline {
+          color: @red;
+        }
+        &.online {
+          color: @green;
+        }
+      }
+    }
+
+    .IOT-btn {
+      & + .IOT-btn {
+        // margin-right: 10px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .IOT-form-item {
+    margin-bottom: 0;
+  }
+  .IOT-form-item-children {
+    display: flex;
+    align-items: center;
+    .IOT-input,
+    .IOT-select {
+      flex: 1;
+    }
+    .IOTicon-question-circle {
+      width: 20px;
+    }
+  }
+  .desired-text {
+    word-break: break-all;
+  }
+}
+.desired-info-modal {
+  .tips-wrap {
+    display: flex;
+    margin-bottom: 8px;
+    background: @hover-highlight;
+    padding: 16px;
+    word-break: break-all;
+  }
+}

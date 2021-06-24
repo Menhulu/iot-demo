@@ -1,0 +1,105 @@
+@import '~styles/variables.less';
+@import '~styles/mixins/ellipsis.less';
+.stable-wrap {
+  background: @white;
+  padding: 8px 16px;
+  .IOT-table-thead > tr > th,
+  .IOT-table-tbody > tr > td {
+    text-align: left;
+    padding: 6px;
+    // &:first-child {
+    //   padding-left: 24px;
+    // }
+    // &:last-child {
+    //   padding-right: 24px;
+    // }
+  }
+  .IOT-table-thead > tr > th {
+    font-size: @smallFontSize;
+    line-height: @baseLineHeight;
+    color: @table-titColor;
+    background: @table-bg;
+    font-weight: normal;
+    border: none;
+    .IOT-table-column-sorter .IOT-table-column-sorter-inner-full {
+      margin-top: -0.45em;
+    }
+  }
+  .IOT-table-fixed-header
+    > .IOT-table-content
+    > .IOT-table-scroll
+    > .IOT-table-body {
+    min-height: 100px;
+  }
+  .IOT-table-fixed-header .IOT-table-scroll .IOT-table-header {
+    padding-bottom: 0;
+    margin-bottom: -16px;
+  }
+
+  .IOT-table-tbody > tr {
+    &:nth-child(even) {
+      background-color: @table-stripe;
+    }
+  }
+  .IOT-table-tbody > tr > td {
+    font-size: @smallFontSize;
+    line-height: @smallLineHeight;
+    // padding-top: 8px;
+    // padding-bottom: 8px;
+    border-color: @table-border;
+    vertical-align: middle;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    word-wrap: break-word;
+    .ellipse {
+      display: inline-block;
+      width: 100%;
+      line-height: @baseFontSize;
+      .ellipsis();
+    }
+    .IOT-btn {
+      color: @primary;
+      font-size: @smallFontSize;
+      padding: 0;
+      background: none;
+      margin: 0 5px;
+      // TODO: 点击一直有个状态，是什么状态
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &.IOT-btn-circle {
+        background: @gray-lightest;
+        color: @primary;
+        &:hover {
+          background: @edit-btn-hover-highlight;
+          color: @white;
+        }
+      }
+      & + .IOT-btn {
+        margin-left: 10px;
+      }
+    }
+  }
+  .footer {
+    margin-top: @bigSpace;
+  }
+  // 空内容
+  .IOT-table-placeholder {
+    border: none;
+    padding: 0;
+    .empty {
+      text-align: center;
+      margin-top: 130px;
+      .empty-img {
+        margin-bottom: @smallSpace;
+      }
+      .empty-text {
+        font-size: @smallFontSize;
+        color: @table-emptyTextColor;
+      }
+    }
+  }
+}

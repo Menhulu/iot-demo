@@ -1,0 +1,41 @@
+@import '~styles/variables.less';
+.IOT-layout-header {
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .headerTitle {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: @white;
+    font-size: 20px;
+    padding-left: 10px;
+    font-weight: bold;
+  }
+
+  position: relative;
+  height: 60px;
+  padding: 10px;
+  line-height: 1;
+  background: @somber;
+}
+.not-auth-page {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  .not-auth-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../../static/pic/403.jpg) center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,85 @@
+@import '~styles/variables.less';
+.thing-type-info {
+  padding: 0 16px;
+  .basic-info-form {
+    .IOT-row {
+      .IOT-row {
+        &.IOT-form-item {
+          .IOT-col.IOT-form-item-label {
+            min-width: 158px;
+          }
+        }
+        .block {
+          display: block;
+        }
+        .err-msg {
+          max-width: 160px;
+          display: inline-block;
+          white-space: normal;
+          word-break: break-all;
+          word-wrap: normal;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .profiles {
+    .title-wrap {
+      .title {
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+    }
+    .profiles-table {
+      .err-msg {
+        color: @red;
+        word-break: break-all;
+        word-wrap: break-word;
+        white-space: normal;
+      }
+    }
+  }
+  .profile-wrap {
+    position: relative;
+  }
+
+  .delProfiles {
+    margin-left: 10px;
+  }
+
+  // .profile-wrap+.profile-wrap {
+  //   margin-top: 20px;
+  // }
+
+  .btn-box {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1305px) {
+  .thing-type-info {
+    .basic-info-form {
+      .node-type-row {
+        .IOT-radio-group{
+          .IOT-radio-wrapper:first-child{
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1096px) {
+  .thing-type-info {
+    .basic-info-form {
+      .node-type-row {
+        .IOT-radio-group{
+          .IOT-radio-wrapper:nth-child(2){
+            margin-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}

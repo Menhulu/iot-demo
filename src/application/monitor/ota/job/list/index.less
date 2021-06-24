@@ -1,0 +1,70 @@
+@import '~styles/variables.less';
+@import '~styles/mixins/ellipsis.less';
+.job-header-content {
+  border-top: 1px solid @gray-lightest;
+
+  background: #fff;
+  .IOT-select {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .basic-inp-s {
+    width: 120px;
+  }
+  .search-input {
+    display: inline-block;
+    width: 480px;
+    vertical-align: middle;
+    margin-left: 20px;
+  }
+  .IOT-select-selection__rendered {
+    overflow: hidden;
+    height: 30px;
+  }
+}
+.job-list {
+  .obtain-height.obtain-list {
+    margin: 10px 40px 0 10px;
+    width: calc(100% + 20px);
+    overflow: scroll;
+    .IOT-list {
+      padding-right: 20px;
+    }
+  }
+  .icon-start-job,
+  .icon-pause-job,
+  .icon-cancel-job {
+    line-height: 30px;
+  }
+
+  .IOT-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .IOT-empty-description {
+      line-height: 24px;
+      color: #b6b6b6;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+}
+.job-detail-list {
+  .detail-overview {
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    .IOT-row {
+      padding: 10px 0;
+      .name {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100px;
+      }
+    }
+  }
+}

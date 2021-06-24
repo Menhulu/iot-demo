@@ -1,0 +1,117 @@
+@import '~styles/variables.less';
+
+.firmware-wrap {
+  padding: 16px;
+  .basic-info-form {
+    .IOT-row {
+      .IOT-row {
+        &.IOT-form-item {
+          .IOT-col.IOT-form-item-label {
+            min-width: 128px;
+          }
+          .IOT-upload.IOT-upload-drag {
+            height: 80%;
+          }
+        }
+      }
+    }
+    .sub-item {
+      .IOT-row {
+        &.IOT-form-item {
+          .IOT-col.IOT-form-item-label {
+            padding: 0 0 0 126px;
+            border-right: none;
+            label {
+              padding: 2px 8px;
+              background: #fff;
+              border-left: 1px solid #e9e9e9;
+              min-width: 128px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .download {
+    margin-left: 10px;
+
+    text-decoration: underline @primary;
+  }
+  .IOT-select-selection-selected-value {
+    height: 30px;
+    overflow: hidden;
+  }
+  .err-msg {
+    line-height: 22px;
+    color: @red;
+  }
+  .upload-disabled {
+    cursor: not-allowed;
+    color: @gray-lightest;
+    .IOT-upload input[type='file'] {
+      cursor: not-allowed;
+    }
+    .IOT-btn {
+      cursor: not-allowed;
+    }
+  }
+  .uploading-status {
+    margin-left: 10px;
+  }
+  .delFile {
+    color: @primary;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  .fileurl {
+    display: block;
+    line-height: 18px;
+    word-break: break-all;
+  }
+  .tips {
+    margin-left: 20px;
+    font-size: @smallFontSize;
+    color: @gray;
+  }
+
+  .upload-devices {
+    .empty-box {
+      display: inline-block;
+      vertical-align: top;
+      width: 128px;
+      height: 100%;
+      background: #f7f7f7;
+      border-right: 1px solid #e9e9e9;
+      border-left: 1px solid #e9e9e9;
+    }
+    .gray-scale {
+      display: inline-block;
+      vertical-align: top;
+      margin-bottom: 10px;
+      padding: 2px 8px;
+      .warning {
+        color: @warning;
+      }
+    }
+    .upload-box {
+      margin-top: 8px;
+      display: block;
+    }
+    .upload-status {
+      margin-left: 10px;
+      color: @gray;
+    }
+    .upload-rule {
+      margin-top: 10px;
+      color: @grey-light;
+    }
+  }
+
+  .btn-box {
+    margin: 20px 0;
+    text-align: center;
+    .IOT-btn-default {
+      background: @gray-lightest;
+    }
+  }
+}

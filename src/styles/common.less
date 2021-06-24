@@ -1,0 +1,334 @@
+@import './mixins/clearfix';
+@import './variables.less';
+
+.clearfix {
+  .clearfix();
+}
+
+//float
+.f-r {
+  float: right;
+}
+.f-l {
+  float: left;
+}
+.dsn {
+  display: none;
+}
+.ds-lb {
+  display: inline-block;
+}
+
+//width
+.w-300 {
+  width: 300px;
+}
+.w-320 {
+  width: 320px;
+}
+
+.w-200 {
+  width: 200px;
+}
+.w-400 {
+  width: 400px;
+}
+.w-500 {
+  width: 500px;
+}
+
+//text-align:
+.ta-r {
+  text-align: right;
+}
+.ta-l {
+  text-align: left;
+}
+.ta-c {
+  text-align: center;
+}
+
+// font-size
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.fs-20 {
+  font-size: 20px;
+}
+
+// margin
+.mr-10 {
+  margin-right: 10px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.ml-5 {
+  margin-left: 5px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mt-5 {
+  margin-top: 5px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+
+// padding
+.pr-10 {
+  padding-right: 10px;
+}
+.pl-10 {
+  padding-left: 10px;
+}
+.pb-10 {
+  padding-bottom: 10px;
+}
+.pt-10 {
+  padding-top: 10px;
+}
+.pr-20 {
+  padding-right: 20px;
+}
+.pl-20 {
+  padding-left: 20px;
+}
+.pb-40 {
+  padding-bottom: 40px;
+}
+.pt-40 {
+  padding-top: 40px;
+}
+.pad20 {
+  padding: 20px;
+}
+
+// vertical-align
+.ver-m {
+  vertical-align: middle;
+}
+
+.ver-tb {
+  vertical-align: text-bottom;
+}
+
+// color
+.primary-color {
+  color: @primary;
+}
+.red {
+  color: @red;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Input 样式
+input.IOT-input {
+  border-radius: 0;
+  height: 30px;
+  line-height: 30px;
+  padding: 5px 9px;
+  background: #fff;
+  outline: none;
+  box-shadow: none;
+  &[disabled] {
+    background: @gray-lightest;
+  }
+}
+
+// input::-webkit-input-placeholder {
+//   /* WebKit browsers */
+//   color: #999;
+// }
+// input:-moz-placeholder {
+//   /* Mozilla Firefox 4 to 18 */
+//   color: #999;
+// }
+// input::-moz-placeholder {
+//   /* Mozilla Firefox 19+ */
+//   color: #999;
+// }
+// input:-ms-input-placeholder {
+//   /* Internet Explorer 10+ */
+//   color: #999;
+// }
+
+input::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999;
+}
+input:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999;
+}
+input::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999;
+}
+input:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999;
+}
+
+.search-form.IOT-form-inline {
+  padding: @smallSpace 16px;
+  background: @white;
+  .IOT-form-item {
+    margin-right: 8px;
+    height: 28px;
+    .IOT-form-item-control {
+      line-height: 28px;
+      .IOT-btn {
+        height: 28px;
+        line-height: 28px;
+        + .IOT-btn {
+          margin-left: 10px;
+        }
+      }
+      .IOT-input {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// 可编辑单元格的样式
+.editTable {
+  .IOT-table {
+    table {
+      border: 1px solid @border-color;
+      border: none;
+      background: @white;
+    }
+    .IOT-table-thead {
+      height: 42px;
+      line-height: 42px;
+      font-size: @baseFontSize;
+      color: @black;
+      th {
+        padding: 0 20px;
+        background-color: @gray-deep;
+        &:first-child {
+          border-left: 1px solid #e8e8e8;
+        }
+      }
+    }
+
+    .IOT-table-tbody {
+      tr {
+        padding-left: 24px;
+        padding-right: 24px;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &:nth-child(2n) {
+          background-color: @gray-lightester;
+        }
+
+        td {
+          font-size: @smallFontSize;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          padding: 6px 20px;
+          vertical-align: top;
+
+          &:last-child {
+            vertical-align: middle;
+          }
+          &:first-child {
+            border-left: 1px solid #e8e8e8;
+          }
+
+          .editable-cell-value-wrap,
+          input.IOT-input {
+            width: 100%;
+            padding: 0 10px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 0;
+          }
+          & > div {
+            min-height: 18px;
+          }
+        }
+      }
+    }
+  }
+
+  .add-btn {
+    font-size: @smallFontSize;
+    margin-top: @baseSpace;
+    padding-left: 0;
+  }
+
+  .editable-cell {
+    position: relative;
+  }
+
+  .editable-cell-value-wrap {
+    padding: 5px 12px;
+    cursor: pointer;
+  }
+
+  .editable-row .editable-cell-value-wrap {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    padding: 4px 11px;
+  }
+  .IOT-form-explain {
+    white-space: normal;
+  }
+  // 如果数据为空，且是查看状态的时候
+  &.disabled {
+    .IOT-table-empty {
+      table {
+        border: 1px solid @border-color;
+        background-color: @gray-deep;
+      }
+    }
+  }
+}
+.drawer-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #e9e9e9;
+  padding: 10px 16px;
+  background: #fff;
+  text-align: right;
+}
+.IOT-collapse-header{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}

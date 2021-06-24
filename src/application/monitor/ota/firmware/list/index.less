@@ -1,0 +1,57 @@
+@import '~styles/variables.less';
+@import '~styles/mixins/ellipsis.less';
+.firmware-header-content {
+  border-top: 1px solid @gray-lightest;
+  background: #fff;
+  .search-form {
+    padding: @smallSpace 16px;
+    .IOT-btn {
+      height: 28px;
+      line-height: 28px;
+      + .IOT-btn {
+        margin-left: 10px;
+      }
+    }
+  }
+  .IOT-select {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .basic-inp-s {
+    width: 120px;
+  }
+  .search-input {
+    display: inline-block;
+    width: 480px;
+    vertical-align: middle;
+    margin-left: 20px;
+  }
+  .IOT-select-selection__rendered {
+    overflow: hidden;
+    height: 30px;
+  }
+}
+.firmware-list {
+  text-align: center;
+  margin-top: 20px;
+
+  .icon-job {
+    font-size: 14px;
+  }
+
+  .IOT-empty {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .IOT-empty-description {
+      line-height: 24px;
+      color: #b6b6b6;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+}

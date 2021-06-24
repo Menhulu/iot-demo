@@ -1,0 +1,402 @@
+@import './styles/base.less';
+
+body {
+  margin: 0;
+  font-family: 'Helvetica', 'Source Han Sans', 'Microsoft YaHei', '微软雅黑',
+    'PingFang SC', Arials;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button[IOT-click-animating-without-extra-node]:after {
+  border: 0 none;
+  opacity: 0;
+  animation: none 0 ease 0 1 normal;
+}
+
+#root {
+  height: 100%;
+  min-width: 1200px;
+}
+
+.App {
+  font-family: 'Helvetica', 'Source Han Sans', 'Microsoft YaHei', '微软雅黑',
+    'PingFang SC', Arials;
+  line-height: 1.15;
+  color: @black;
+  // background: @back-gray;
+  height: 100%;
+
+  button[IOT-click-animating-without-extra-node]:after {
+    border: 0 none;
+    opacity: 0;
+    animation: none 0 ease 0 1 normal;
+  }
+  .icon-help {
+    color: @primary;
+  }
+
+  .handle-btn {
+    text-align: center;
+    background: @gray-lightest;
+    color: @primary;
+    border: none;
+    vertical-align: top;
+    border-radius: 50%;
+    &:hover {
+      background: @edit-btn-hover-highlight;
+      color: @white;
+    }
+
+    & + .handle-btn {
+      margin-left: 10px;
+    }
+
+    &[disabled] {
+      background: @gray-lightest;
+      color: @gray-lightecc;
+    }
+    &.IOT-btn-link {
+      &[disabled] {
+        background: none;
+        color: @gray-lightecc;
+      }
+    }
+    &:active,
+    &:focus {
+      background: @back-green;
+      color: @primary;
+      border: none;
+    }
+  }
+  .inline-block {
+    display: inline-block;
+  }
+
+  .IOT-table {
+    tr {
+      th {
+        border: none;
+        background: @white-darkGrey;
+      }
+    }
+
+    // tbody {
+    //   tr:nth-child(even) {
+    //     background: @white-darkGrey;
+    //   }
+    // }
+
+    .IOT-btn {
+      text-align: center;
+      background: @gray-lightest;
+      color: @primary;
+      border: none;
+      vertical-align: top;
+
+      &:hover {
+        background: none;
+        color: @primary;
+      }
+
+      &[disabled] {
+        background: @gray-lightest;
+        color: @gray-lightecc;
+      }
+      &.IOT-btn-link {
+        background: none;
+        color: @primary;
+        &[disabled] {
+          background: none;
+          color: @gray-lightecc;
+        }
+      }
+    }
+  }
+}
+
+.IOT-select-dropdown {
+  .IOT-select-dropdown-menu {
+    padding: 0;
+  }
+  &.select-with-id {
+    .IOT-select-dropdown-menu-item {
+      border-bottom: 1px solid #efefef;
+      .option-box {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .item-id {
+        font-size: @gray;
+        font-size: @smallFontSize;
+      }
+    }
+  }
+}
+.IOT-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background: #f0f2f5;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+.IOT-modal {
+  &.IOT-modal-confirm {
+    &.IOT-modal-confirm-confirm {
+      &.back-confirm-modal {
+        .IOT-modal-close {
+          display: block;
+          .IOT-modal-close-icon {
+            &:hover {
+              transform: rotate(180deg);
+              transition: all 200ms linear;
+            }
+          }
+        }
+        .IOT-modal-body {
+          padding: 30px 24px 26px;
+        }
+        .IOT-modal-confirm-title {
+          text-align: center;
+          font-size: @biggestFontSize;
+          color: #000000;
+        }
+        .IOT-modal-confirm-content {
+          padding: 20px 0 0;
+          margin: 0;
+          text-align: center;
+          font-size: @bigFontSize;
+          color: @black;
+        }
+        .IOT-modal-confirm-btns {
+          float: none;
+          text-align: center;
+          margin-top: 20px;
+          .IOT-btn {
+            width: 90px;
+            height: 36px;
+            & + .IOT-btn {
+              margin-left: 20px;
+            }
+          }
+          .IOT-btn-default {
+            background: @white-off;
+            border: 1px solid @gray-lighter;
+            color: @gray;
+          }
+        }
+      }
+    }
+  }
+  .IOT-modal-body {
+    padding: 20px 24px;
+    text-align: left;
+
+    input.IOT-input {
+      width: 100%;
+    }
+  }
+}
+.err-msg {
+  .icon-error {
+    vertical-align: middle;
+  }
+}
+.IOT-form-item-label {
+  line-height: 30px;
+}
+.IOT-form-item-control {
+  line-height: 30px;
+}
+.table-cell-tooltip.IOT-tooltip {
+  .IOT-tooltip-content {
+    .IOT-tooltip-arrow {
+      display: none;
+    }
+    .IOT-tooltip-inner {
+      background: #f2f2f2;
+      color: #000;
+      font-size: 12px;
+      min-height: 20px;
+      padding: 0px 8px;
+      line-height: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+// 要删除
+.lang-btn {
+  color: #fff;
+  position: fixed;
+  left: 50px;
+  bottom: 60px;
+  cursor: pointer;
+  height: 36px;
+  width: 96px;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 6px;
+  background-color: rgba(84, 204, 167, 1);
+  box-shadow: 0 15px 18px -6px rgba(84, 204, 167, 0.65);
+  z-index: 9999;
+}
+/*
+* 通用风格表单样式
+*/
+.basic-info-form {
+  // border: 1px solid @gray-border;
+  h3 {
+    margin: 16px 0;
+    color: @baseFontColor;
+    font-size: @baseFontSize;
+    line-height: 22px;
+  }
+  .IOT-row {
+    display: flex;
+    &.basic-form-row {
+      border-top: 1px solid @gray-border;
+      border-bottom: 1px solid @gray-border;
+      border-right: 1px solid @gray-border;
+      + .basic-form-row {
+        border-top: none;
+      }
+    }
+
+    .IOT-col {
+      display: flex;
+      align-items: center;
+      .rule {
+        min-width: 64px;
+      }
+    }
+    .IOT-row {
+      &.IOT-form-item {
+        height: 100%;
+        flex: 1;
+        display: flex;
+        color: @baseFontColor;
+        margin-bottom: 0;
+
+        &.IOT-form-item-with-help {
+          margin-bottom: 0;
+        }
+        .IOT-input {
+          width: 100%;
+        }
+        textarea.IOT-input {
+          margin-bottom: 0;
+        }
+        .IOT-col.IOT-form-item-label {
+          min-width: 84px;
+          background-color: @white-off;
+          padding: 2px 8px;
+          min-height: 32px;
+          line-height: 32px;
+          border-left: 1px solid @gray-border;
+          border-right: 1px solid @gray-border;
+          > label {
+            color: @baseFontColor !important;
+          }
+        }
+        .IOT-col.IOT-form-item-control-wrapper {
+          flex: 1;
+          padding: 3px 0 3px 3px;
+          // min-height: 36px;
+          // line-height: 36px;
+
+          .IOT-form-item-control {
+            width: 100%;
+            .IOT-form-item-children {
+              word-break: break-all;
+            }
+          }
+        }
+      }
+    }
+  }
+  .submit-btn-wrap {
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+// .IOT-spin-blur {
+//   opacity: 1 !important;
+// }
+// .IOT-spin-container::after {
+//   position: absolute;
+//   top: 32px !important;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   z-index: 10;
+//   display: none \9;
+//   width: 100%;
+//   height: 100%;
+//   background: #fff;
+//   opacity: 0.5;
+//   -webkit-transition: all 0.3s;
+//   transition: all 0.3s;
+//   content: '';
+//   pointer-events: none;
+// }
+
+// .IOT-spin-nested-loading > div > .IOT-spin {
+//   position: absolute;
+//   top: 32px !important;
+//   left: 0;
+//   z-index: 4;
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   max-height: 400px;
+// }
+
+.text-lg-left {
+  text-align: left;
+}
+.warning {
+  color: @warning;
+}
+
+// popover样式
+.operation-list {
+  .IOT-popover-inner-content {
+    padding: 0;
+    .IOT-btn {
+      display: block;
+      width: 100px;
+      height: 40px;
+      line-height: 40px;
+
+      &:hover {
+        background-color: @hover-highlight;
+      }
+    }
+  }
+}
+
+.edgeAppVersionInfo{
+  .IOT-form,.IOT-form-horizontal,.form-wrap{
+    padding-bottom: 20px;
+  }
+  .drawer-footer{
+    z-index: 9;
+  }
+}
